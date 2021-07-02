@@ -10,9 +10,9 @@ do
   mkdir -p $iFolder/mergedTimes/
   echo "doing $iFolder"
   lastTime=1
-  lastTimeFolder=$(ls $iFolder|grep -v mergedTimes|sort -rh|head -n 1)
+  lastTimeFolder=$(ls $iFolder|grep -v mergedTimes|LC_ALL=C sort -rh|head -n 1)
   startTime=$( cat $iFolder/$lastTimeFolder/$fileRoot.dat |grep -v "^#"|head -n 1|awk '{print $1}' )
-  for iTime in $(ls $iFolder|grep -v mergedTimes|sort -rh)
+  for iTime in $(ls $iFolder|grep -v mergedTimes|LC_ALL=C sort -rh)
   do
     if [ $lastTime -eq 1 ];
     then
