@@ -5,6 +5,8 @@ The purpose of this script is to merge the different time folders created by the
 The script takes the source/target filename root *fileRoot* as a single argument.
 Example:
 
+`cd mainCaseDirectory`
+
 `chmod +x mergePostProc.sh`
 
 `./mergePostProc.sh force`
